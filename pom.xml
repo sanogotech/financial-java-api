@@ -123,6 +123,14 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<layers>
+				      <enabled>true</enabled>
+				    </layers>
+					<image>
+						<name>docker.io/mariazevedo88/${project.artifactId}:latest</name>
+					</image>
+				</configuration>
 			</plugin>
 			<plugin>
                 <groupId>org.apache.maven.plugins</groupId>
