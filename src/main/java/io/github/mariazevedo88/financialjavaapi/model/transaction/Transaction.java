@@ -23,6 +23,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 /**
  * Class that implements the Transaction structure.
  * 
@@ -49,8 +51,14 @@ public class Transaction implements Serializable {
 	
 	private String authorizationNumber;
 	
+	//@NotNull
+	//private LocalDateTime transactionDate;
+	
 	@NotNull
-	private LocalDateTime transactionDate;
+	@JsonFormat(shape=JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss[.SSS][.SS][.S]")
+    private LocalDateTime transactionDate;
+	// "transactionDate": "2020-04-05T09:59:51.312"
+	
 	
 	@NotNull
 	private BigDecimal amount;

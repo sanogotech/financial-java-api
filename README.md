@@ -6,6 +6,20 @@
 
 A financial API for managing transactions. The API main URL `/financial/v1`.
 
+# Security API
+https://dev.applicationinsights.io/documentation/Authorization/API-key-authentication
+
+```
+Authenticating with an API key
+There are three methods available to use the API key along with the above Public API format URL to get access to your application's data, in recommended order:
+
+Custom header: you can use the custom header X-Api-Key with your API key
+Basic authentication: you can provide the API key as either the username or password for basic authentication. If you provide both fields, the API requires that API key be in the username.
+Query parameter: The API supports the parameter &api_key which enables you to pass the API key without specifying any headers.
+
+
+```
+
 ## Features
 
 This API provides HTTP endpoint's and tools for the following:
